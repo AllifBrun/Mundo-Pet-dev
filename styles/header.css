@@ -1,0 +1,36 @@
+header{
+margin-bottom: 21px;
+
+width: 100%;
+
+display: flex;
+justify-content: left;
+
+    &>div{
+        background-color: #2E2C30;
+        width: 153px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: 16px;
+
+
+        &>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            & svg{
+                width: 18px;
+                height: 18px;
+            }
+
+            & h1{
+                color: #9282FA;
+                font: bold 16px/24px var(--grotesk);
+            }
+        }
+    }
+}

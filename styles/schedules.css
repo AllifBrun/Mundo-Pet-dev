@@ -1,0 +1,216 @@
+
+#schedules{
+     display: flex;
+     flex-direction: column;
+    & .title{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        
+
+        & input{
+            width: 183px;
+            height: 48px;
+            border: none;
+            box-shadow: none;
+         border-color: var(--border-primary);
+        }
+
+        .date-container{
+            position: relative;
+           
+           width: min-content;
+            & label{
+                position: absolute;
+                right: 14px;
+                top: 13px;
+
+            }
+        }
+
+        input[type="date"]{
+            appearance: none;
+            position: relative;
+            padding-left: 40px;
+            font: 400 16/150% var(--inter);
+            color: var(--content-secondary);
+            background-color: transparent;
+            border: 1px solid var(--border-primary);
+            border-radius: 8px;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            background: url(".././assets/svg/calendar.svg") no-repeat center;
+            background-size: contain;
+            cursor: pointer;
+            opacity: 1; /* Garante que o ícone fique visível */
+            position: absolute;
+            left: 10px;
+        }
+
+
+        & .title-content{
+            & h1{
+                font: var(--title);
+                color: #F5F4F5;
+            }
+
+            & p{
+                font: var(--pg-md);
+                color: #98959D;
+
+                margin-bottom: 12px;
+            }
+
+          
+        }
+    }
+
+
+    .cards-container{
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        & ul{
+            background-color: var(--background-tertiary);
+            border-radius: 10px;
+
+                & .card-header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    padding-inline: 20px;
+                    height: 3rem;
+
+
+
+                    & .agrupamento{
+                        display: flex;
+                        gap: 12px;
+                        & svg{
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        color: var(--content-primary);
+                        font: 700 11px/24px var(--inter-tight);
+                    }
+
+                    & .separado{
+                        color: var(--content-secondary);
+                        font: 700 11px/24px var(--inter-tight);
+                    }
+
+                }
+
+
+                & li{
+                    position: relative;
+
+                    padding-inline: 2rem;
+                    padding-top: 2rem;
+                    padding-bottom: 3rem;
+
+                    border-top: 1px solid var(--border-primary);
+
+                    & .time, .pet{
+                        color: var(--content-primary);
+                        font: var(--pg-md);
+                    }
+
+                    & .tutor, .procedure{
+                        color: var(--content-secondary);
+                        font: var(--pg-md);
+                    }
+
+                    .remove{
+                        color: var(--content-tertiary);
+                        font: 400 12px/16px var(--inter);
+                        position: absolute;
+                        right: 2rem;
+                        cursor: pointer;
+                    }
+
+                    .principal{
+                        display: flex;
+
+                        & .time{
+                            margin-right: 12px;
+                        }
+
+                        .pet{
+                            margin-right: 4px;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (width>430px){
+    #schedules{
+        & .title{
+
+            flex-direction: row;
+            gap: 65px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cards-container{
+            & ul{
+           
+               & .schedule{
+                display: flex;
+                & .principal{
+                    width: 295px;
+
+                    & .time{
+                        margin-right: 30px;
+                    }
+                }
+
+               & .procedure{
+                display: inline;
+               }
+
+               & .remove{
+               top: 36px;
+               right: 39px;
+               
+               }
+            }
+
+            & li{
+                padding-bottom: 1rem;
+            }
+
+            }
+        }
+    }
+}

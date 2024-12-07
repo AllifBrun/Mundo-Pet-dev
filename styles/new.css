@@ -1,0 +1,34 @@
+.new{
+    width: 100%;
+    height: 84px;
+
+    background-color: #23242C;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+
+    position: fixed;
+    bottom: 0;
+
+
+    & button{
+        width: 218px;
+        height: 3rem;
+
+        background-color: var(--content-brand);
+
+        color: black;
+        font: 700 16px/24px var(--inter-tight);
+
+        border-radius: .5rem;
+        outline: none;
+        border: none;
+
+        box-shadow: 0 -1px .2px 1px var(--content-brand),
+        0 1px .2px  var(--content-brand);
+        
+    }
+}
