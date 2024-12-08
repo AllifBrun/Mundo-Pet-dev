@@ -173,6 +173,9 @@
 
 @media (width>430px){
     #schedules{
+
+        position: relative;
+
         & .title{
 
             flex-direction: row;

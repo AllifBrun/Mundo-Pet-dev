@@ -1,5 +1,6 @@
 .new{
-    width: 100%;
+    
+    width: 100vw;
     height: 84px;
 
     background-color: #23242C;
@@ -12,6 +13,7 @@
 
     position: fixed;
     bottom: 0;
+    left: 0;
 
 
     & button{
@@ -27,8 +29,35 @@
         outline: none;
         border: none;
 
-        box-shadow: 0 -1px .2px 1px var(--content-brand),
-        0 1px .2px  var(--content-brand);
+        box-shadow: 0 0 20px var(--content-brand);
         
+        &:hover{
+            background-color: #BDB4FA;
+            box-shadow: 0 0 30px var#BDB4FA;
+        }
+
     }
+}
+
+
+
+
+
+@media (width > 430px){
+
+.new{
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: initial;
+    right: -150px;
+    height: max-content;
+    width: max-content;
+    & button{
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+    }
+}
+
 }
