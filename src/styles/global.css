@@ -45,6 +45,12 @@
 
 }
 
+.blur{
+    filter: blur(5px);
+}
+
+
+
 body{
     background-color: #14151D;
     max-width: 1920px;
@@ -58,12 +64,13 @@ main{
     margin-inline: auto;
     padding-inline: 20px;
  
-    filter: blur(5px);
 }
 
     button{
         cursor: pointer;
     }
+
+
 
 @media (width > 430px){
     main{
