@@ -88,7 +88,7 @@
 
 
                & input[type="date"]::-webkit-calendar-picker-indicator {
-                    background: url("../../assets/svg/calendar.svg") no-repeat center;
+                    background: url("../assets/calendar.svg") no-repeat center;
                     background-size: contain;
                     cursor: pointer;
                     opacity: 1; /* Garante que o ícone fique visível */

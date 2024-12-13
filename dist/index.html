@@ -61,7 +61,7 @@
                         </svg>
 
                     </label>
-                    <input type="date" id="date">
+                    <input type="date" id="dateSelected">
                 </div>
 
             </div>
@@ -135,8 +135,6 @@
                 </ul>
 
                 <ul class="card" id="afternoon">
-
-
                     <div class="card-header">
 
 
@@ -224,7 +222,7 @@
 
     <div id="book">
         <div class="book-container">
-            <img src="../assets/svg/close.svg" id="fechar" alt="">
+            <img src="./assets/close.svg" id="fechar" alt="">
             <h1>Agende um atendimento</h1>
             <p>Preencha os dados do cliente para realizar o agendamento:</p>
 
@@ -233,19 +231,19 @@
 
                 <div class="book-item">
 
-                    <img src="assets/svg/user.svg" alt="">
+                    <img src="./assets/user.svg" alt="">
                     <label for="">Nome do Tutor</label>
                     <input type="text" id="tutor" placeholder="Digite o nome do tutor">
                 </div>
 
                 <div class="book-item">
-                    <img src="assets/svg/pet-paw.svg" alt="">
+                    <img src="./assets/pet-paw.svg" alt="">
                     <label for="pet">Nome do Pet</label>
                     <input type="text" id="pet" placeholder="Digite o nome do Pet">
                 </div>
 
                 <div class="book-item">
-                    <img src="assets/svg/phone.svg" alt="">
+                    <img src="./assets/phone.svg" alt="">
                     <label for="tel">Telefone</label>
                     <input type="text" id="tel" placeholder="(00) 0 0000-0000">
                 </div>
@@ -273,12 +271,12 @@
                             
                             <div class="data">
                         <label for="data">Data</label>
-                        <input type="date" id="data">
+                        <input type="date" id="day">
 </div>
                             <div class="hora">
 
                                 <label for="time">Hora</label>
-                                <select id="frutas" name="frutas">
+                                <select id="hour" name="frutas">
                                     
                                     <option value="12">12:00</option>
                                     <option value="13">13:00</option>
@@ -291,7 +289,7 @@
 
 
 
-                <button>AGENDAR</button>
+                <button id="agendar">AGENDAR</button>
             </form>
         </div>
 
