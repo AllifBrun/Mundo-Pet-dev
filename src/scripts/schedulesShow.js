@@ -1,14 +1,16 @@
 import dayjs from 'dayjs'
 
-const periodMorning = document.getElementById('morning')
+const periodMorning = document.getElementById('manha')
 const periodAfternoon = document.getElementById('afternoon')
 const periodNight = document.getElementById('night')
 
 export function schedulesShow({ dailySchedules }){
     try{
     
-
+        
+        periodMorning.innerHTML = ""
         dailySchedules.forEach((schedule)=>{
+
             const item = document.createElement('li')
             item.classList.add('schedule')
 
@@ -47,16 +49,12 @@ export function schedulesShow({ dailySchedules }){
             tutor.textContent = schedule.tutor
             procedure.textContent = schedule.service
             remove.textContent = "Remover agendamento"
+            periodMorning.appendChild(item);
+            console.log(item)
         })
 
-        const scheduleHour = dayjs(schedule.hour, 'HH:mm');
-        if (scheduleHour.isBefore(dayjs('12:00', 'HH:mm'))) {
-            periodMorning.appendChild(item);
-        } else if (scheduleHour.isBefore(dayjs('18:00', 'HH:mm'))) {
-            periodAfternoon.appendChild(item);
-        } else {
-            periodNight.appendChild(item);
-        }
+
+    
     }
  catch (error) {
     console.error("Erro ao exibir os horários:", error);

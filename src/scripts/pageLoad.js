@@ -19,7 +19,8 @@ export async function schedulesDay(){
 }
 
 
-document.addEventListener
-("DOMContentLoaded", function(){
+dateSelected.addEventListener
+("change", function(){
 schedulesDay()
+console.log('executado')
 })
