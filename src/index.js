@@ -7,6 +7,8 @@ import './scripts/pageLoad.js'
 import './scripts/setSchedule.js'
 import './scripts/schedule-fetch-by-day.js'
 import './scripts/schedulesShow.js'
+import './scripts/remove.js'
+import './scripts/scheduleCancel.js'
 
 // CSS
 import './styles/book.css'

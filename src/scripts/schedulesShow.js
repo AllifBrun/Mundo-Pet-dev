@@ -1,18 +1,18 @@
 import dayjs from 'dayjs'
 
-const periodMorning = document.getElementById('manha')
+const periodMorning = document.getElementById('morning')
 const periodAfternoon = document.getElementById('afternoon')
 const periodNight = document.getElementById('night')
-
+const cardShow = document.querySelector('.card-show')
 export function schedulesShow({ dailySchedules }){
     try{
-    
         
-        periodMorning.innerHTML = ""
+        cardShow.innerHTML = ""
         dailySchedules.forEach((schedule)=>{
 
             const item = document.createElement('li')
             item.classList.add('schedule')
+            item.setAttribute('data-id', schedule.id)
 
             const principal = document.createElement('div')
             principal.classList.add('principal')
@@ -45,11 +45,12 @@ export function schedulesShow({ dailySchedules }){
 
 
             time.textContent = schedule.hour
-            pet.textContent = schedule.pet
-            tutor.textContent = schedule.tutor
+            pet.textContent = schedule.pet+ '/'
+            tutor.textContent = schedule.tutor 
             procedure.textContent = schedule.service
             remove.textContent = "Remover agendamento"
-            periodMorning.appendChild(item);
+            cardShow.appendChild(item)
+            periodMorning.appendChild(cardShow);
             console.log(item)
         })
 
