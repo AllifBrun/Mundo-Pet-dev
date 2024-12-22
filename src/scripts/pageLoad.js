@@ -9,6 +9,7 @@ console.log(now)
 
 const dateSelected = document.getElementById('dateSelected')
 dateSelected.value = today
+dateSelected.setAttribute('min', today)
 
 document.addEventListener('DOMContentLoaded', function(){
     schedulesDay()
@@ -17,9 +18,13 @@ document.addEventListener('DOMContentLoaded', function(){
 export async function schedulesDay(){
     const date = dateSelected.value
 
+    //Obtém os agendamentos
     const dailySchedules = await scheduleFetchByDay({ date })
     console.log(dailySchedules)
+    //carrega os horários disponíveis para agendar
     loadAvailableHours(dailySchedules)
+
+    //carrega os horários agendados
     schedulesShow({ dailySchedules })
 }
 

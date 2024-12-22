@@ -1,9 +1,14 @@
+import dayjs from 'dayjs'
 const tutor = document.getElementById('tutor')
 const pet = document.getElementById('pet')
 const tel = document.getElementById('tel')
 const service = document.getElementById('service')
 const day = document.getElementById('day')
 const hour = document.getElementById('hour')
+
+
+const today = dayjs().format('YYYY-MM-DD')
+day.value = today
 
 
 const agendar = document.getElementById('agendar')

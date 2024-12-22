@@ -21,6 +21,7 @@ const openingHours = [
 
 //Mostra os horários disponíveis para seleção
 export function loadAvailableHours(){
+select.innerHTML = ""
 
 const currentDay = dayjs().format("YYYY-MM-DD")
 openingHours.forEach((hour)=>{

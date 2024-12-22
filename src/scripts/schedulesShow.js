@@ -3,13 +3,21 @@ import dayjs from 'dayjs'
 const periodMorning = document.getElementById('morning')
 const periodAfternoon = document.getElementById('afternoon')
 const periodNight = document.getElementById('night')
-const cardShow = document.querySelector('.card-show')
-export function schedulesShow({ dailySchedules }){
-    try{
-        
-        cardShow.innerHTML = ""
-        dailySchedules.forEach((schedule)=>{
+const cardShowMorning = document.querySelector('.card-show-morning')
+const cardShowAfternoon = document.querySelector('.card-show-afternoon')
+const cardShowNight = document.querySelector('.card-show-night')
 
+export function schedulesShow({ dailySchedules }) {
+    try {
+
+        cardShowMorning.innerHTML = ""
+        cardShowAfternoon.innerHTML = ""
+        cardShowNight.innerHTML = ""
+
+        
+        dailySchedules.forEach((schedule) => {
+
+            // Cria os elementos de exibição do agendamento
             const item = document.createElement('li')
             item.classList.add('schedule')
             item.setAttribute('data-id', schedule.id)
@@ -33,7 +41,7 @@ export function schedulesShow({ dailySchedules }){
             const remove = document.createElement('div')
             remove.classList.add('remove')
 
-
+            // Monta o item
             item.appendChild(principal)
             principal.appendChild(time)
 
@@ -45,18 +53,30 @@ export function schedulesShow({ dailySchedules }){
 
 
             time.textContent = schedule.hour
-            pet.textContent = schedule.pet+ '/'
-            tutor.textContent = schedule.tutor 
+            pet.textContent = schedule.pet + '/'
+            tutor.textContent = schedule.tutor
             procedure.textContent = schedule.service
             remove.textContent = "Remover agendamento"
-            cardShow.appendChild(item)
-            periodMorning.appendChild(cardShow);
-            console.log(item)
+
+            console.log('tempo:', time)
+            const timeValue = time.textContent
+
+            // Determina o período com base no horário
+            if (timeValue <= 12) {
+
+                cardShowMorning.appendChild(item);
+            } else if (timeValue <= 18) {
+                cardShowAfternoon.appendChild(item)
+            } else {
+                cardShowNight.appendChild(item)
+            }
         })
 
 
-    
+
     }
- catch (error) {
-    console.error("Erro ao exibir os horários:", error);
-}}
+    catch (error) {
+        console.error("Erro ao exibir os horários:", error);
+    }
+}
+
