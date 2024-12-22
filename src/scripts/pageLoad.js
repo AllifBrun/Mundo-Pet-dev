@@ -1,5 +1,6 @@
 import {scheduleFetchByDay} from './schedule-fetch-by-day.js'
 import {schedulesShow} from './schedulesShow.js'
+import {loadAvailableHours} from './openingHours.js'
 
 const dayjs = require('dayjs')
 const now = dayjs().format('DD-MM-YY HH:mm')
@@ -18,7 +19,7 @@ export async function schedulesDay(){
 
     const dailySchedules = await scheduleFetchByDay({ date })
     console.log(dailySchedules)
-    
+    loadAvailableHours(dailySchedules)
     schedulesShow({ dailySchedules })
 }
 

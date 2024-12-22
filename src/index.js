@@ -9,6 +9,7 @@ import './scripts/schedule-fetch-by-day.js'
 import './scripts/schedulesShow.js'
 import './scripts/remove.js'
 import './scripts/scheduleCancel.js'
+import './scripts/openingHours.js'
 
 // CSS
 import './styles/book.css'
@@ -17,4 +18,5 @@ import './styles/header.css'
 import './styles/index.css'
 import './styles/new.css'
 import './styles/schedules.css'
+
 

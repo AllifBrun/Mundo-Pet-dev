@@ -1,3 +1,49 @@
 {
-  "schedules": []
+  "schedules": [
+    {
+      "id": "3bf4",
+      "tutor": "Paola",
+      "pet": "Polar",
+      "tel": "41990131302",
+      "service": "",
+      "day": "",
+      "hour": "13"
+    },
+    {
+      "id": "8942",
+      "tutor": "Paola",
+      "pet": "Polar",
+      "tel": "41990131302",
+      "service": "",
+      "day": "",
+      "hour": "13"
+    },
+    {
+      "id": "0130",
+      "tutor": "Paola",
+      "pet": "Polar",
+      "tel": "41990131302",
+      "service": "a",
+      "day": "",
+      "hour": "13"
+    },
+    {
+      "id": "65ba",
+      "tutor": "Paola",
+      "pet": "Polar",
+      "tel": "41990131302",
+      "service": "",
+      "day": "",
+      "hour": "12"
+    },
+    {
+      "id": "7641",
+      "tutor": "Paola",
+      "pet": "Polar",
+      "tel": "41990131302",
+      "service": "",
+      "day": "2024-12-21",
+      "hour": "15"
+    }
+  ]
 }
